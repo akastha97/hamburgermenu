@@ -1,9 +1,9 @@
 // Display product cards
 
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 import "package:shopaholic/services/product_services.dart";
 import "package:shopaholic/ui_components/product_tile.dart";
-import "package:provider/provider.dart";
 
 import "../models/product_model.dart";
 import "product_detail_screen.dart";
@@ -20,17 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // search bar
-        Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: TextField(
-            decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.search),
-                label: const Text("Search"),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16))),
-          ),
-        ),
+        SizedBox(height: 20),
 
         // list of products in grid view
         Expanded(
